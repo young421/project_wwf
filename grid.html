@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid | css</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        .grid {
+            border: 2px solid black;
+            display: grid;
+            grid-template-columns: repeat(2,200px) 100px;
+            /* grid-template-rows: 100px 200px 300px; */
+            /* grid-template-rows: repeat(3,100px); */
+            grid-template-rows: 50px repeat(2, 100px);
+        }
+        .grid li {background-color: lemonchiffon;}
+        .grid li:nth-child(odd) {background-color: pink;}
+        #root {
+            background-color: aqua;
+            display: grid;
+            grid-template-areas: 
+                'header header'
+                'aside main'
+                'footer footer';
+            grid-template-rows: 100px 300px 100px;
+            grid-template-columns: 250px 1000px;
+            width: 1250px; margin: 0 auto; gap: 10px 30px;
+        }
+        #root * {border: 2px solid red;}
+        /* grid-area란? 부모에서 자식들을 명칭으로 관리하기 위해 자식에게 부여하는 의미있는 이름 */
+        #root header {grid-area:header;}
+        #root aside {grid-area:aside;}
+        #root main {grid-area:main;}
+        #root footer {grid-area:footer;}
+    </style>
+</head>
+<body>
+    <div id="root">
+        <header>header</header>
+        <aside>aside</aside>
+        <main>main</main>
+        <footer>footer</footer>
+    </div>
+    <ul class="grid">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+    </ul>
+</body>
+</html>

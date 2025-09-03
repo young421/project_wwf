@@ -1,0 +1,142 @@
+#wrap {}
+/* -------------------------------------- 1행 */
+#wrap .row1 {background-image:url(../images/main_bg.jpg);}
+#wrap .row1::after {
+    content: ''; display: block; 
+    width:100%; height: 100%;
+    background:linear-gradient(transparent, rgba(0,0,0,0.5));
+    position:absolute; left:0 ; top: 0;
+    z-index:100;/* position 선택속성 */
+}
+#wrap .row1 #visual {position:relative; z-index:200;}
+#wrap .row1 #visual .logo {margin-bottom: 100px;}
+#wrap .row1 #visual .logo a {}
+#wrap .row1 #visual .logo a img {width: 100px; height: 100px;}
+#wrap .row1 #visual .title {
+    color: var(--color-white); 
+    font-size: var(--main-title70-d); font-weight: var(--weight-medium);
+    text-align: center; margin-bottom: 100px;
+    line-height: var(--line130);
+}
+#wrap .row1 #visual .title em {font-weight: var(--weight-bold);}
+#wrap .row1 #visual .sponsor_btn {margin: 0 auto; margin-bottom: 100px;}
+#wrap .row1 #visual .sponsor_btn img {}
+#wrap .row1 #visual .sponsor_question_btn {
+    display: flex; flex-flow: row nowrap;
+    justify-content: center; align-items: center; gap: 10px;
+    background: var(--color-black); color: var(--color-white);
+    border-radius: 40px; float: right;
+    width: 416px; height: 50px;
+}
+#wrap .row1 #visual .sponsor_question_btn img {
+    width: 30px; height: 30px;
+}
+#wrap .row1 #visual .sponsor_question_btn span {
+    font-size: var(--main-question26-d);
+}
+/* -------------------------------------- 2행 퀴즈 */
+#wrap .row2 {background-image: url(../images/quiz_bg.jpg);}
+#wrap .row2 #quiz {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: max-content;padding-bottom: 131.5px; color: var(--color-white);
+}
+#wrap .row2 #quiz .quiz_list {}
+#wrap .row2 #quiz .quiz_list h2 {margin-bottom: 40px; transform: translateX(-130px);}
+#wrap .row2 #quiz .quiz_list p {}
+#wrap .row2 #quiz .quiz_list #quiz_frm {}
+#wrap .row2 #quiz .quiz_list #quiz_frm .list {margin: 20px 0 40px;}
+#wrap .row2 #quiz .quiz_list #quiz_frm .list li {}
+#wrap .row2 #quiz .quiz_list #quiz_frm .list li input[id^=q] {display: none;}
+#wrap .row2 #quiz .quiz_list #quiz_frm .list li input[id^=q]:checked + label {
+    background-image: url(../images/on_btn.png);
+}
+#wrap .row2 #quiz .quiz_list #quiz_frm .list li label {
+    background-image: url(../images/off_btn.png); background-repeat: no-repeat;
+    padding-left:50px; font-size: var(--main-question26-d);
+    line-height: 50px;
+}
+#wrap .row2 #quiz .quiz_list #quiz_frm #quiz_answer_btn {
+    background: var(--color-black); border-radius: 30px; color: var(--color-white);
+    display: flex; flex-flow: row nowrap; justify-content: center; align-items: center;
+    width: 369px; height: 46px;
+    font-size: var(--main-question26-d);
+}
+#wrap .row2 #quiz .quiz_current {padding: 98px 0;}
+#wrap .row2 #quiz .quiz_current .status {
+    margin-bottom: 20px; width: 470px; height: 211px;
+    background: var(--color-white); border-radius: 20px; overflow: hidden; float: right;
+}
+#wrap .row2 #quiz .quiz_current .status dt {
+    font-size: var(--main-question26-d); background: var(--color-point-orange1);
+    display: flex; justify-content: center; align-items: center; gap: 20px;
+    padding: 15px;
+}
+#wrap .row2 #quiz .quiz_current .status dt img {}
+#wrap .row2 #quiz .quiz_current .status dd {
+    color: var(--color-point-orange1); font-size: var(--main-sponsor34-d);
+    display: flex; justify-content: center; align-items: flex-end;
+    padding-top: 30px;
+}
+#wrap .row2 #quiz .quiz_current .status dd em {font-size: var(--main-title70-d); font-weight: var(--weight-bold);}
+#wrap .row2 #quiz .quiz_current .status dd span {color: var(--color-black); font-weight: var(--weight-medium);}
+#wrap .row2 #quiz .quiz_current p {float: right;}
+/* -------------------------------------- 3행 동영상 */
+#wrap .row3 {background-image: url(../images/video_bg.jpg);}
+#wrap .row3 #story {display: flex; flex-flow: column nowrap; align-items: center;}
+#wrap .row3 #story h2 {}
+#wrap .row3 #story iframe {width: 868px;height: 450px; margin: 60px 0;}
+#wrap .row3 #story .sponsor_btn {margin: 0 auto;}
+#wrap .row3 #story .sponsor_btn img {}
+/* -------------------------------------- 4행 빙하면적감소 */
+#wrap .row4 {background-image: url(../images/50_bg.jpg);}
+#wrap .row4 #wwf_msg1 {color: var(--color-white);}
+#wrap .row4 #wwf_msg1 h2 {text-align: left;}
+#wrap .row4 #wwf_msg1 h2 em {position: relative; }
+#wrap .row4 #wwf_msg1 h2 em::after {
+    content: ''; display: inline-block;
+    background-color: #fff; 
+    position: absolute; left:0; top: 0;
+    width:100%; height:100%; z-index: 13; 
+    }
+#wrap .row4 #wwf_msg1 h2 em span {z-index: 15; position: relative; color: #000; font-weight: var(--weight-bold);}
+#wrap .row4 #wwf_msg1 h2+p {margin: 30px 0;}
+#wrap .row4 #wwf_msg1 p img {}
+/* -------------------------------------- 5행 빙하가 녹으면 */
+#wrap .row5 {background-color: var(--color-grayf5);}
+#wrap .row5 #wwf_msg2 {}
+#wrap .row5 #wwf_msg2 h2 {}
+#wrap .row5 #wwf_msg2 h2+p {text-align: center; margin: 50px;}
+#wrap .row5 #wwf_msg2 .msg_card_wrap {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); gap: 25px;
+}
+#wrap .row5 #wwf_msg2 .msg_card_wrap li {width: 400px;}
+#wrap .row5 #wwf_msg2 .msg_card_wrap li:nth-child(1) dl {
+    background-image: url(../images/card_1.jpg); background-repeat: no-repeat;
+}
+#wrap .row5 #wwf_msg2 .msg_card_wrap li:nth-child(2) dl {
+    background-image: url(../images/card_2.jpg); background-repeat: no-repeat;
+}
+#wrap .row5 #wwf_msg2 .msg_card_wrap li:nth-child(3) dl {
+    background-image: url(../images/card_3.jpg); background-repeat: no-repeat;
+}
+#wrap .row5 #wwf_msg2 .msg_card_wrap li dl {
+    color: var(--color-white); text-align: center;
+    height: 320px; padding: 50px 0;  position: relative;
+}
+#wrap .row5 #wwf_msg2 .msg_card_wrap li dl::after {
+    background: linear-gradient(var(--color-black),transparent); content:'';
+    display: block; position: absolute; left: 0; top: 0;
+    width: 100%; height: 100%;
+}
+#wrap .row5 #wwf_msg2 .msg_card_wrap li dl dt {
+    font-size: var(--main-subtitle55-d); font-weight: var(--weight-bold);
+}
+#wrap .row5 #wwf_msg2 .msg_card_wrap li dl dd {
+    font-size: var(--main-question26-d); font-weight: var(--weight-medium); margin-top: 20px;
+}
+#wrap .row5 #wwf_msg2 .msg_card_wrap li p {
+    font-size: var(--main-content20-d); background-color: #fff; height: 198px;
+    padding: 20px 15px; line-height: var(--line150); text-align: center;
+} 
