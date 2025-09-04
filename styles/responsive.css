@@ -15,6 +15,7 @@
     /* --------------------------------- 2행 */
     #wrap .bg .container h2 {font-size: var(--main-subtitle40-t);}
     #wrap .bg .container h2+p {font-size: var(--main-content16-t);}
+    #wrap .row2 #quiz {padding-left: 80px; padding-right: 80px;}
     #wrap .row2 #quiz .quiz_list #quiz_frm .list li label {
         font-size: var(--main-question20-t-m); 
         display:inline-block; height:50px; line-height: 33px;
