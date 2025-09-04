@@ -1,6 +1,6 @@
 #wrap {}
 /* -------------------------------------- 1행 */
-#wrap .row1 {background-image:url(../images/main_bg.jpg);}
+#wrap .row1 {background-image:url(../images/main_bg.jpg);/}
 #wrap .row1::after {
     content: ''; display: block; 
     width:100%; height: 100%;
@@ -11,7 +11,7 @@
 #wrap .row1 #visual {position:relative; z-index:200;}
 #wrap .row1 #visual .logo {margin-bottom: 100px;}
 #wrap .row1 #visual .logo a {}
-#wrap .row1 #visual .logo a img {width: 100px; height: 100px;}
+#wrap .row1 #visual .logo a img {width: 100px;}
 #wrap .row1 #visual .title {
     color: var(--color-white); 
     font-size: var(--main-title70-d); font-weight: var(--weight-medium);
@@ -39,10 +39,10 @@
 #wrap .row2 #quiz {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    height: max-content;padding-bottom: 131.5px; color: var(--color-white);
+    height: max-content; padding: 131.5px 0; color: var(--color-white);
 }
 #wrap .row2 #quiz .quiz_list {}
-#wrap .row2 #quiz .quiz_list h2 {margin-bottom: 40px; transform: translateX(-130px);}
+#wrap .row2 #quiz .quiz_list h2 {margin-bottom: 40px; transform: translateX(-130px)}
 #wrap .row2 #quiz .quiz_list p {}
 #wrap .row2 #quiz .quiz_list #quiz_frm {}
 #wrap .row2 #quiz .quiz_list #quiz_frm .list {margin: 20px 0 40px;}
@@ -54,7 +54,7 @@
 #wrap .row2 #quiz .quiz_list #quiz_frm .list li label {
     background-image: url(../images/off_btn.png); background-repeat: no-repeat;
     padding-left:50px; font-size: var(--main-question26-d);
-    line-height: 50px;
+    height: 30px; line-height:50px;
 }
 #wrap .row2 #quiz .quiz_list #quiz_frm #quiz_answer_btn {
     background: var(--color-black); border-radius: 30px; color: var(--color-white);
@@ -90,7 +90,7 @@
 #wrap .row3 #story .sponsor_btn img {}
 /* -------------------------------------- 4행 빙하면적감소 */
 #wrap .row4 {background-image: url(../images/50_bg.jpg);}
-#wrap .row4 #wwf_msg1 {color: var(--color-white);}
+#wrap .row4 #wwf_msg1 {color: var(--color-white); height: max-content;}
 #wrap .row4 #wwf_msg1 h2 {text-align: left;}
 #wrap .row4 #wwf_msg1 h2 em {position: relative; }
 #wrap .row4 #wwf_msg1 h2 em::after {
@@ -106,12 +106,20 @@
 #wrap .row5 {background-color: var(--color-grayf5);}
 #wrap .row5 #wwf_msg2 {}
 #wrap .row5 #wwf_msg2 h2 {}
-#wrap .row5 #wwf_msg2 h2+p {text-align: center; margin: 50px;}
+#wrap .row5 #wwf_msg2 h2+p {
+    text-align: center; margin: 50px 0;
+    /* 한 줄 말줄임 처리(br 제거) */
+    /* width: 300px;
+    white-space: nowrap; *//* 한줄 처리 */
+    /* overflow: hidden;
+    text-overflow: ellipsis; */ /* 설정한 width 기준 영역을 나간 글자를 말줄임하기 */
+}
+#wrap .row5 #wwf_msg2 h2+p br {/* display: none; */}
 #wrap .row5 #wwf_msg2 .msg_card_wrap {
     display: grid; 
     grid-template-columns: repeat(3, 1fr); gap: 25px;
 }
-#wrap .row5 #wwf_msg2 .msg_card_wrap li {width: 400px;}
+#wrap .row5 #wwf_msg2 .msg_card_wrap li {width: 100%; padding-bottom: 20px; background-color: #fff;}
 #wrap .row5 #wwf_msg2 .msg_card_wrap li:nth-child(1) dl {
     background-image: url(../images/card_1.jpg); background-repeat: no-repeat;
 }
@@ -123,20 +131,28 @@
 }
 #wrap .row5 #wwf_msg2 .msg_card_wrap li dl {
     color: var(--color-white); text-align: center;
-    height: 320px; padding: 50px 0;  position: relative;
+    height: 320px; padding: 50px 0;  position: relative; 
 }
 #wrap .row5 #wwf_msg2 .msg_card_wrap li dl::after {
     background: linear-gradient(var(--color-black),transparent); content:'';
     display: block; position: absolute; left: 0; top: 0;
-    width: 100%; height: 100%;
+    width: 100%; height: 100%; z-index: 9;
 }
 #wrap .row5 #wwf_msg2 .msg_card_wrap li dl dt {
-    font-size: var(--main-subtitle55-d); font-weight: var(--weight-bold);
+    font-size: var(--main-subtitle55-d); font-weight: var(--weight-bold); 
+    position: relative; z-index: 10; line-height: var(--line130);
 }
 #wrap .row5 #wwf_msg2 .msg_card_wrap li dl dd {
     font-size: var(--main-question26-d); font-weight: var(--weight-medium); margin-top: 20px;
+    position: relative; z-index: 10;
 }
 #wrap .row5 #wwf_msg2 .msg_card_wrap li p {
-    font-size: var(--main-content20-d); background-color: #fff; height: 198px;
-    padding: 20px 15px; line-height: var(--line150); text-align: center;
+    font-size: var(--main-content20-d); max-height: 150px;
+    line-height: var(--line150); text-align: center; padding:20px 15px 0;
+    /* 말줄임(...) 처리 */
+    overflow: hidden;
+    display: -webkit-box;/* 브라우저엔진 -webkit- */
+    -webkit-line-clamp: 2; /* 몇 줄 초과시 말줄임 처리 */
+    -webkit-box-orient: vertical;/* 글 방향*/
+    text-overflow: ellipsis;/* 말줄임 속성 */
 } 

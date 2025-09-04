@@ -1,0 +1,61 @@
+/* ------------------------- 태블릿 */
+@media screen and (max-width:1250px) {
+    /* 전체 너비가 가변형, 좌우 여백 80px */
+    /* ---------------- 태블릿 ------------------- 1행 */
+    #wrap .bg .container {padding-left: 80px; padding-right: 80px;}
+    #wrap .row1 #visual .title {font-size: var(--main-title50-t);}
+    #wrap .bg .container .sponsor_btn {
+        width: 274px; height: 52px;
+        font-size: var(--main-sponsor22-t-m);
+    }
+    #wrap .row1 #visual .sponsor_question_btn {width: 297px; height: 40px;}
+    #wrap .row1 #visual .sponsor_question_btn img:nth-child(1) {display: none;}
+    #wrap .row1 #visual .sponsor_question_btn img {width: 20px; height: 20px;}
+    #wrap .row1 #visual .sponsor_question_btn span {font-size: var(--main-question20-t-m);}
+    /* --------------------------------- 2행 */
+    #wrap .bg .container h2 {font-size: var(--main-subtitle40-t);}
+    #wrap .bg .container h2+p {font-size: var(--main-content16-t);}
+    #wrap .row2 #quiz .quiz_list #quiz_frm .list li label {
+        font-size: var(--main-question20-t-m); 
+        display:inline-block; height:50px; line-height: 33px;
+    } 
+    #wrap .row2 #quiz .quiz_current .status {width: 393px; height: 211px;}
+    /* --------------------------------- 3행 */
+    #wrap .row3 #story iframe {width: 100%;}
+    /* --------------------------------- 4행 */
+    #wrap .row4 #wwf_msg1 p img {width: 100%;}
+    /* --------------------------------- 5행 */
+    #wrap .row5 #wwf_msg2 .msg_card_wrap li dl dt {font-size: var(--main-subtitle40-t);}
+    #wrap .row5 #wwf_msg2 .msg_card_wrap li dl dd {font-size: var(--main-question20-t-m);}
+    #wrap .row5 #wwf_msg2 .msg_card_wrap li p {font-size: var(--main-content16-t);}
+}/*  end 1250 */
+/* ------------------------- 모바일 */
+@media screen and (max-width:1024px) {
+    /* ----------------모바일--------- 1행 */
+    /* 이미지의 폭 변경 시 이미지태그는 100%, 필요한 경우 부모(블록)에만 px */
+    #wrap .bg .container {padding-left: 15px; padding-right: 15px;}
+    #wrap .bg .container h2 {font-size: var(--main-subtitle25-m);}
+    #wrap .bg .container h2+p {font-size: var(--main-content14-m);}
+    #wrap .row1 #visual .logo {width: 60px;}
+    #wrap .row1 #visual .logo a img {width: 100%;}
+    #wrap .row1 #visual .title {font-size: var(--main-title30-m);}
+    #wrap .row1 #visual .sponsor_question_btn {float: none; margin: 0 auto;}
+    /* ----------------모바일--------- 2행 */
+    #wrap .row2 #quiz {display: block; padding-left: 15px; padding-right: 15px;}
+    #wrap .row2 #quiz .quiz_list h2 {width: 100%; transform: none;}
+    #wrap .row2 #quiz .quiz_list #quiz_frm #quiz_answer_btn {width: 100%;}
+    #wrap .row2 #quiz .quiz_current .status {float: none; margin: 0 auto 20px; width: 346px; height: 185px;}
+    #wrap .row2 #quiz .quiz_current .status dt {font-size: var(--main-sponsor22-t-m);}
+    #wrap .row2 #quiz .quiz_current .status dd em {font-size: var(--main-title50-t);}
+    #wrap .row2 #quiz .quiz_current .status dd span {font-size: var(--main-question26-d);}
+    #wrap .row2 #quiz .quiz_current p {float: none; text-align: center;}
+    /* ----------------모바일--------- 3행 */
+    /* ----------------모바일--------- 4행 */
+    /* ----------------모바일--------- 5행 */
+    #wrap .row5 #wwf_msg2 {height: max-content;}
+    #wrap .row5 #wwf_msg2 .msg_card_wrap {display: block;}
+    #wrap .row5 #wwf_msg2 .msg_card_wrap li {margin: 0 0 15px;}
+    #wrap .row5 #wwf_msg2 .msg_card_wrap li dl {height: 100%; background-size: cover; background-position: center bottom;}
+    #wrap .row5 #wwf_msg2 .msg_card_wrap li dl dt {font-size: var(--main-title30-m);}
+    #wrap .row5 #wwf_msg2 .msg_card_wrap li p {font-size: var(--main-content14-m);}
+}

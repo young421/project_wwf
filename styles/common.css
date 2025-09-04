@@ -19,7 +19,7 @@
     --main-sponsor22-t-m:1.375rem;
     --main-question20-t-m:1.25rem;
     /* 글자크기(mobile) */
-    --main-title30-m:1.875;
+    --main-title30-m:1.875rem;
     --main-subtitle25-m:1.563rem;
     --main-content14-m:0.875rem;
     /* 행간, 자간, 굵기 */
@@ -39,8 +39,8 @@
 #wrap .bg .container {
     max-width:1250px; min-width: 320px;
     height: 100vh; margin: 0 auto; overflow: hidden;
-    padding: 100px 0 0;
-    background: rgba(255, 255, 0, 0.5);/* 테스트용 */
+    padding: 110px 0;
+    /* background: rgba(255, 255, 0, 0.5); *//* 테스트용 */
 }
 #wrap .bg .container .sponsor_btn {
     border-radius: 40px; width: 349px; height: 64px;
